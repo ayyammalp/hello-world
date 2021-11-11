@@ -85,6 +85,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<executions>
+            <execution>
+                <goals>
+                    <goal>repackage</goal>
+                </goals>
+                <configuration>
+                    <mainClass>com.example.demo.DemoApplication</mainClass>
+                    <outputDirectory>${project.basedir}/docker</outputDirectory>
+                </configuration>
+            </execution>
+        </executions>
 		</plugins>
 	</build>
 
